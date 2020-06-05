@@ -11,4 +11,12 @@ The board sits on top of one of those small Cypress FX2LP baords that can be pur
 
 ![FX2LP](https://raw.githubusercontent.com/MattisLind/AnalogFluxReader/master/fx2lp.jpeg)
 
+## Links
+* [The Uncomplicated Universal Usb board](http://lea.hamradio.si/~s57uuu/uuusb/index.htm)
+* [adhdengineering](https://adhdengineering.wordpress.com/tag/fx2lp/)
+* [Electronics -- USB-FX2 Interface Board (USB-2.0)](https://www.triplespark.net/elec/periph/USB-FX2/)
+* [EZ-USB on Linux](http://www.linux-usb.org/ezusb/)
+* [Library routines for creating firmware for the Cypress FX2 (CY7C68013 and variants) with SDCC](https://github.com/djmuhlestein/fx2lib)
+* [EZ-USB® Technical Reference Manual](https://www.cypress.com/file/126446/download)
+
 
