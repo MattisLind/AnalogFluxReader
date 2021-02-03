@@ -7,6 +7,8 @@ Instead of using the read detector in the drive the idea is to connect the diffe
 
 ![Schematic](https://raw.githubusercontent.com/MattisLind/AnalogFluxReader/master/AnalogFluxReader.png)
 
+Please note that some component values, (R and C) in the analog path is just placeholders and is selected in a later stage. The idea that some of them should be easy to change so that filter cut-off frequency and gain can be changed.
+
 The board sits on top of one of those small Cypress FX2LP boards that can be purchased from China cheaply. The FX2LP chip provide a programmable USB interface with high performance. Giving the possibility to sample the A/D converter with up to 48 MSMPS.
 
 ![FX2LP](https://raw.githubusercontent.com/MattisLind/AnalogFluxReader/master/fx2lp.jpeg)
