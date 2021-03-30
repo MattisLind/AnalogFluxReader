@@ -159,17 +159,6 @@ F 3 "" H 2850 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR016
-U 1 1 67F33D42
-P 5350 7550
-F 0 "#PWR016" H 5350 7300 50  0001 C CNN
-F 1 "GNDA" H 5355 7377 50  0000 C CNN
-F 2 "" H 5350 7550 50  0001 C CNN
-F 3 "" H 5350 7550 50  0001 C CNN
-	1    5350 7550
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GNDA #PWR026
 U 1 1 67F33E7D
 P 4900 3450
@@ -409,12 +398,10 @@ Wire Wire Line
 	7400 1550 7250 1550
 Wire Wire Line
 	5500 2450 5700 2450
-NoConn ~ 7400 1150
 Wire Wire Line
 	7400 1950 7250 1950
 Wire Wire Line
 	7250 1950 7250 2000
-NoConn ~ 7900 1050
 $Comp
 L power:GND #PWR033
 U 1 1 67F61744
@@ -433,8 +420,6 @@ Wire Wire Line
 Wire Wire Line
 	7900 1250 8050 1250
 Connection ~ 8050 1250
-Wire Wire Line
-	8050 1250 8050 1150
 $Comp
 L power:+3V3 #PWR034
 U 1 1 67F6794A
@@ -1193,7 +1178,7 @@ F 3 "~" H 7250 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7250 850  7250 1350
+	7250 850  7250 1150
 Connection ~ 7250 1450
 Wire Wire Line
 	7250 1450 7400 1450
@@ -1548,9 +1533,9 @@ DRVSEL
 Text Label 10650 1550 0    50   ~ 0
 STEP
 Text Label 7900 2850 0    50   ~ 0
-PD3
-Text Label 7900 2750 0    50   ~ 0
 PD1
+Text Label 7900 2750 0    50   ~ 0
+PD3
 Text Label 8200 1850 0    50   ~ 0
 PB3
 Text Label 8200 1750 0    50   ~ 0
@@ -2133,17 +2118,6 @@ F 3 "~" H 7600 3150 50  0001 C CNN
 	1    7600 3150
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x10_Odd_Even J2
-U 1 1 607BFE64
-P 7600 1450
-F 0 "J2" H 7650 2067 50  0000 C CNN
-F 1 "Conn_02x10_Odd_Even" H 7650 1976 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 7600 1450 50  0001 C CNN
-F 3 "~" H 7600 1450 50  0001 C CNN
-	1    7600 1450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1350 6300 1800 6300
 Wire Wire Line
@@ -2455,4 +2429,98 @@ Wire Wire Line
 Connection ~ 10600 3050
 Wire Wire Line
 	10600 3050 10600 2950
+$Comp
+L Device:C C23
+U 1 1 60DCAD0E
+P 3100 7300
+F 0 "C23" H 3215 7346 50  0000 L CNN
+F 1 "3.3u" H 3215 7255 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 3138 7150 50  0001 C CNN
+F 3 "~" H 3100 7300 50  0001 C CNN
+	1    3100 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C24
+U 1 1 60DCADD6
+P 3550 7300
+F 0 "C24" H 3665 7346 50  0000 L CNN
+F 1 "100n" H 3665 7255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3588 7150 50  0001 C CNN
+F 3 "~" H 3550 7300 50  0001 C CNN
+	1    3550 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR055
+U 1 1 60DCAE98
+P 3100 7550
+F 0 "#PWR055" H 3100 7300 50  0001 C CNN
+F 1 "GND" H 3105 7377 50  0000 C CNN
+F 2 "" H 3100 7550 50  0001 C CNN
+F 3 "" H 3100 7550 50  0001 C CNN
+	1    3100 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR056
+U 1 1 60DCAF37
+P 3550 7550
+F 0 "#PWR056" H 3550 7300 50  0001 C CNN
+F 1 "GND" H 3555 7377 50  0000 C CNN
+F 2 "" H 3550 7550 50  0001 C CNN
+F 3 "" H 3550 7550 50  0001 C CNN
+	1    3550 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 7550 3100 7450
+Wire Wire Line
+	3550 7550 3550 7450
+Wire Wire Line
+	3550 7150 3550 7050
+Wire Wire Line
+	3550 6900 3950 6900
+Connection ~ 3950 6900
+Wire Wire Line
+	3100 7150 3100 7050
+Wire Wire Line
+	3100 7050 3550 7050
+Connection ~ 3550 7050
+Wire Wire Line
+	3550 7050 3550 6900
+$Comp
+L power:GND #PWR0115
+U 1 1 60E41116
+P 5350 7550
+F 0 "#PWR0115" H 5350 7300 50  0001 C CNN
+F 1 "GND" H 5355 7377 50  0000 C CNN
+F 2 "" H 5350 7550 50  0001 C CNN
+F 3 "" H 5350 7550 50  0001 C CNN
+	1    5350 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J2
+U 1 1 607BFE64
+P 7600 1450
+F 0 "J2" H 7650 2067 50  0000 C CNN
+F 1 "Conn_02x10_Odd_Even" H 7650 1976 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 7600 1450 50  0001 C CNN
+F 3 "~" H 7600 1450 50  0001 C CNN
+	1    7600 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 1150 7250 1150
+Connection ~ 7250 1150
+Wire Wire Line
+	7250 1150 7250 1350
+Wire Wire Line
+	7900 1050 8050 1050
+Wire Wire Line
+	8050 1050 8050 1150
+Connection ~ 8050 1150
+Wire Wire Line
+	8050 1150 8050 1250
 $EndSCHEMATC
